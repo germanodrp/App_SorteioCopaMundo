@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {MaterialIcons} from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons'
 const { Screen, Navigator } = createBottomTabNavigator();
 
 
@@ -25,8 +25,8 @@ export function TabsRoutes() {
                 component={Home}
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarIcon: ({color, size}) =>(
-                        <MaterialIcons 
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialIcons
                             name="home"
                             color={color}
                             size="35px"
@@ -40,8 +40,8 @@ export function TabsRoutes() {
                 component={Potes}
                 options={{
                     tabBarLabel: 'Potes',
-                    tabBarIcon: ({color, size}) =>(
-                        <MaterialIcons 
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialIcons
                             name="flag"
                             color={color}
                             size="35px"
@@ -55,9 +55,9 @@ export function TabsRoutes() {
                 component={Sorteio}
                 options={{
                     tabBarLabel: 'Sorteio',
-                    tabBarIcon: ({color, size}) =>(
-                        <MaterialIcons 
-                            name="setting"
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialIcons
+                            name="work"
                             color={color}
                             size="35px"
                         />

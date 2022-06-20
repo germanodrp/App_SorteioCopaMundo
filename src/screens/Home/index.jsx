@@ -10,7 +10,6 @@ export function Home() {
         navigation.navigate("potes")
     }
 
-
     const times = [
         { id: 1, nome: "Brasil" },
         { id: 2, nome: "Argentina" },
@@ -22,7 +21,6 @@ export function Home() {
 
     console.log(data)
 
-
     return (
         <Container>
 
@@ -30,8 +28,9 @@ export function Home() {
                 <Image
                     style={{
                         width: 250,
-                        height: 298.69,
-                        alignItems: 'center'
+                        height: 300,
+                        alignItems: 'center',
+                        marginLeft: 77
                     }}
                     source={require("../../assets/CopaMundo.png")} />
             </SectionLogo>
