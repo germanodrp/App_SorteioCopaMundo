@@ -1,12 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons'
-const { Screen, Navigator } = createBottomTabNavigator();
-
 
 import { Home } from '../screens/Home'
 import { Potes } from '../screens/Potes'
 import { Sorteio } from '../screens/Sorteio';
+
+const { Screen, Navigator } = createBottomTabNavigator();
+
 
 export function TabsRoutes() {
 

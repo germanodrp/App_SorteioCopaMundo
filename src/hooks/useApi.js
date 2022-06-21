@@ -3,15 +3,17 @@ import api from '../services/api';
 
 export function useApi(url) {
 
-    const [data, setData] = useState(null)
+    const [data, setData] = useState([])
 
-    useEffect(() => {
-        api.get(url)
-            .then((response) => {
-                setData(response.data)
-            })
-            .catch(error => console.log(error));
-    }, []);
+    useEffect(
+        async () => {
+            await api.get(url)
+                .then((response) => {
+                    setData(response.data)
+                })
+                .catch(error => console.log(error));
+        }, []);
+
 
     return { data }
 

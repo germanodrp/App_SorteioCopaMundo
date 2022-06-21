@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native'
 import { Timepotes } from '../../components/Potes'
-import { Container, Title, SectionPotes } from './styles'
+import { Container } from './styles'
 
 
 export function Potes() {
