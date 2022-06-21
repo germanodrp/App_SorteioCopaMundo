@@ -13,7 +13,8 @@ export function Home() {
                         width: 250,
                         height: 300,
                         alignItems: 'center',
-                        marginLeft: 77
+                        marginLeft: 70,
+                        marginTop: "30%"
                     }}
                     source={require("../../assets/CopaMundo.png")} />
             </SectionLogo>

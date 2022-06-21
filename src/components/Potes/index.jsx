@@ -1,18 +1,10 @@
-import { TeamName, Container, Title } from './styles'
+import { TeamName, Container } from './styles'
 
-export function Timepotes({ timesPotes }) {
+export function Timepotes({item}) {
     return (
         <>
-            <Title>{timesPotes.descricao}</Title>
             <Container>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
-                <TeamName>{timesPotes.time}</TeamName>
+                <TeamName>{item.nome}</TeamName>
             </Container>
         </>
     )

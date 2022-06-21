@@ -1,8 +1,9 @@
 import { FlatList } from 'react-native'
 import { Timepotes } from '../../components/Potes'
 import { Container } from './styles'
-
-
+import {useApi} from '../../hooks/useApi'
+import { useState, useEffect } from 'react'
+import api from '../../services/api'
 export function Potes() {
 
     const timesPotes = [
@@ -13,14 +14,25 @@ export function Potes() {
 
     ]
 
+        //  const {data} = useApi("pote/obterpotes")
+        //     console.log(data)
 
+       const [pote11, setPote1] = useState([])
+        useEffect(async () => {
+                 let resultado = await api.get("pote/obterpotes");
+                    console.log(resultado.data)
+                    setPote1(resultado.data[0].integrantes);
+            }, []);
+
+            console.log(pote11)
     return (
         <Container>
             <FlatList
-                data={timesPotes}
-                keyExtractor={item => item.idPote}
+                data={pote11}
+                keyExtractor={item => item.idPais}
                 renderItem={({ item }) => (
-                    <Timepotes timesPotes={item} />
+                    <Timepotes item={item} />
+                    
                 )}
 
             />
