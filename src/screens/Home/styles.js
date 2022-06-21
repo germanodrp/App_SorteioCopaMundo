@@ -5,10 +5,18 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   text-align: center;
   
-  
 `;
+
 export const SectionLogo = styled.View`
   margin-top: 40px;
+
+`
+
+
+export const SectionTeams = styled.View`
+  color: red;
+  text-align: center;
+  
 
 `
 

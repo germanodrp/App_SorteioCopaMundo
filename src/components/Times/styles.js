@@ -2,6 +2,10 @@ import styled from 'styled-components/native'
 
 
 export const TeamText = styled.Text`
-  color: #9a1032;
-  
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  background-color: #CDC5BF;
+  margin-left: 20px;
   `
