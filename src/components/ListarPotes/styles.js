@@ -1,16 +1,14 @@
 import styled from 'styled-components/native'
 
 export const TeamName = styled.Text`
-  font-size: 21px;
+  font-size: 17px;
   font-weight: bold;
-  margin-top: 3px;
-  margin-left: 4px;
-  
+
   `
 export const Title = styled.Text`
   text-align: center;
   font-size: 20px;
-  margin-top: 5px;
+  margin-top: 8px;
   font-weight: bold;
 `
 export const Container = styled.View`
@@ -18,6 +16,6 @@ export const Container = styled.View`
     margin-left: 8px;
     margin-right: 8px;
     text-align: center ;
-    margin-top: 20px;
     border-radius:5px;
+    margin-top: 1px;
 `

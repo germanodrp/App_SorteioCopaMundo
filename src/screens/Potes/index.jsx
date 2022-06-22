@@ -1,41 +1,73 @@
 import { FlatList } from 'react-native'
-import { Timepotes } from '../../components/Potes'
+import { Timepotes } from '../../components/ListarPotes'
 import { Container } from './styles'
-import {useApi} from '../../hooks/useApi'
 import { useState, useEffect } from 'react'
 import api from '../../services/api'
+
+
+
+
 export function Potes() {
 
-    const timesPotes = [
-        { idPote: 1, descricao: 'Pote 1', time: 'Brasil', },
-        { idPote: 2, descricao: 'Pote 2', time: 'Alemanha' },
-        { idPote: 3, descricao: 'Pote 3', time: 'França' },
-        { idPote: 4, descricao: 'Pote 4', time: 'Croacia' },
 
-    ]
+    const [pote1, setPote1] = useState([])
+    const [pote2, setPote2] = useState([])
+    const [pote3, setPote3] = useState([])
+    const [pote4, setPote4] = useState([])
 
-        //  const {data} = useApi("pote/obterpotes")
-        //     console.log(data)
 
-       const [pote11, setPote1] = useState([])
-        useEffect(async () => {
-                 let resultado = await api.get("pote/obterpotes");
-                    console.log(resultado.data)
-                    setPote1(resultado.data[0].integrantes);
-            }, []);
 
-            console.log(pote11)
+    useEffect(async () => {
+        const resultado = await api.get("pote/obterpotes");
+        setPote1(resultado.data[0].integrantes);
+        setPote2(resultado.data[1].integrantes);
+        setPote3(resultado.data[2].integrantes);
+        setPote4(resultado.data[3].integrantes);
+
+
+    }, []);
+
     return (
         <Container>
             <FlatList
-                data={pote11}
+                data={pote1}
                 keyExtractor={item => item.idPais}
                 renderItem={({ item }) => (
                     <Timepotes item={item} />
-                    
+
                 )}
 
             />
+
+            <FlatList
+                data={pote2}
+                keyExtractor={item => item.idPais}
+                renderItem={({ item }) => (
+                    <Timepotes item={item} />
+
+                )}
+
+            />
+            <FlatList
+                data={pote3}
+                keyExtractor={item => item.idPais}
+                renderItem={({ item }) => (
+                    <Timepotes item={item} />
+
+                )}
+
+            />
+
+            <FlatList
+                data={pote4}
+                keyExtractor={item => item.idPais}
+                renderItem={({ item }) => (
+                    <Timepotes item={item} />
+
+                )}
+
+            />
+
         </Container>
     )
 }

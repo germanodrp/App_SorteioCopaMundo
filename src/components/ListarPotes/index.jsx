@@ -1,6 +1,6 @@
-import { TeamName, Container } from './styles'
+import { TeamName, Container, Title } from './styles'
 
-export function Timepotes({item}) {
+export function Timepotes({ item }) {
     return (
         <>
             <Container>
