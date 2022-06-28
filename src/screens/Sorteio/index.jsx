@@ -1,15 +1,13 @@
 
-import { Container, } from './styles'
+import { Container, ButtonSorteio, Title } from './styles'
 import { useState, useEffect } from 'react'
 import api from '../../services/api'
-import { TouchableOpacity, Text } from 'react-native'
-import { FlatList } from 'react-native-gesture-handler';
+
 
 
 export function Sorteio() {
 
     const [potes, setPotes] = useState([]);
-
 
     var grupoA = [];
     var grupoB = [];
@@ -62,7 +60,7 @@ export function Sorteio() {
             nroGrupo++;
         }
 
-        console.log('pote como está');
+        console.log('Grupos como está');
         console.log(grupoA);
         console.log(grupoB);
         console.log(grupoC);
@@ -74,7 +72,6 @@ export function Sorteio() {
         console.log(pote);
     }
 
-
     function SorteioOutrosPotes(pote) {
 
 
@@ -85,6 +82,7 @@ export function Sorteio() {
             // sorteio = (Math.floor(Math.random() * pote.length));
             let paisSorteado;
             let podeInserir = false;
+
             switch (nroGrupo) {
                 case 1:
 
@@ -95,6 +93,7 @@ export function Sorteio() {
 
                     }
                     grupoA.push(paisSorteado);
+                    console.log(paisSorteado)
                     break;
                 case 2:
                     while (!podeInserir) {
@@ -172,7 +171,6 @@ export function Sorteio() {
         console.log(pote);
     }
 
-
     function InserirGrupo(pGrupo, pPaisSorteado) {
         let limiteMaxContinente = ObterLimiteContinente(pPaisSorteado.continente);
 
@@ -188,13 +186,11 @@ export function Sorteio() {
         return true;
     }
 
-
     function ObterLimiteContinente(pContinente) {
         if (pContinente == "Europa")
             return 2;
         return 1;
     }
-
 
     useEffect(() => {
 
@@ -214,31 +210,16 @@ export function Sorteio() {
     }, []);
 
 
-    console.log(`Grupo A nessa porra: ${grupoA}`)
+
 
     return (
         <Container>
 
-
-            {/* <FlatList
-                data={pote1}
-                keyExtractor={item => item.idPais}
-                renderItem={({ item }) => (
-                    <Timepotes item={item} />
-
-                )}
-
-            /> */}
-
-
-            <TouchableOpacity
-
-                onPress={iniciarSorteio}>
-
-                <Text>Inicia Sorteio</Text>
-
-            </TouchableOpacity>
-
+            <ButtonSorteio
+                onPress={iniciarSorteio}
+            >
+                <Title>SORTEAR</Title>
+            </ButtonSorteio>
 
         </Container>
 
