@@ -28,3 +28,7 @@ export const ButtonSorteio = styled(TouchableOpacity)`
   margin-left: 45px;
   margin-right: 45px;
 `;
+
+export const TableTeams = styled.View`
+  background-color: blue;
+`

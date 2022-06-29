@@ -8,5 +8,13 @@ export const Container = styled.SafeAreaView`
 
 `;
 
+export const TextPotes = styled.Text`
+  color: #9A1032;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2%;
+`
+
 
 

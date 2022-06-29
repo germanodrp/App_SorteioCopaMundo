@@ -1,7 +1,9 @@
 
-import { Container, ButtonSorteio, Title } from './styles'
+import { Container, ButtonSorteio, Title, TableTeams } from './styles'
 import { useState, useEffect } from 'react'
 import api from '../../services/api'
+import { FlatList } from 'react-native';
+import { Timegrupos } from '../../components/ListarGrupos';
 
 
 
@@ -214,6 +216,17 @@ export function Sorteio() {
 
     return (
         <Container>
+            
+            {/* <TableTeams>Grupo A</TableTeams>
+
+            <FlatList 
+                data={grupoB}
+                keyExtractor={Timegrupos => Timegrupos.idPais}
+                renderItem={({ Timegrupos }) => (
+                    <Timegrupos item={Timegrupos} />
+
+                )}
+            /> */}
 
             <ButtonSorteio
                 onPress={iniciarSorteio}

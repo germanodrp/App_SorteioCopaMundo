@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native'
 import { Timepotes } from '../../components/ListarPotes'
-import { Container } from './styles'
+import { Container, TextPotes } from './styles'
 import { useState, useEffect } from 'react'
 import api from '../../services/api'
 
@@ -29,6 +29,7 @@ export function Potes() {
 
     return (
         <Container>
+            <TextPotes>Pote 1</TextPotes>
             <FlatList
                 data={pote1}
                 keyExtractor={item => item.idPais}
@@ -38,7 +39,8 @@ export function Potes() {
                 )}
 
             />
-
+            
+            <TextPotes>Pote 2</TextPotes>
             <FlatList
                 data={pote2}
                 keyExtractor={item => item.idPais}
@@ -48,6 +50,8 @@ export function Potes() {
                 )}
 
             />
+
+            <TextPotes>Pote 3</TextPotes>
             <FlatList
                 data={pote3}
                 keyExtractor={item => item.idPais}
@@ -58,6 +62,7 @@ export function Potes() {
 
             />
 
+            <TextPotes>Pote 4</TextPotes>
             <FlatList
                 data={pote4}
                 keyExtractor={item => item.idPais}

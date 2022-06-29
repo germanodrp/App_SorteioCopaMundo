@@ -1,5 +1,5 @@
 import { Image } from "react-native";
-import { Container, SectionLogo } from './styles'
+import { Container, SectionLogo, TextHome } from './styles'
 
 
 export function Home() {
@@ -12,16 +12,14 @@ export function Home() {
                     style={{
                         width: 250,
                         height: 300,
-                        alignItems: 'center',
-                        marginLeft: 70,
-                        marginTop: "30%"
+                        alignItems: 'center'
                     }}
                     source={require("../../assets/CopaMundo.png")} />
             </SectionLogo>
 
+            <TextHome>Bem vindo(a)! ao sorteio da Copa do Mundo Qatar 2022</TextHome>
+
         </Container>
 
     )
-
-
 }

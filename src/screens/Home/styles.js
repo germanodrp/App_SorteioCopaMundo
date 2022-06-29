@@ -8,15 +8,19 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const SectionLogo = styled.View`
-  margin-top: 40px;
+  margin-top: 50%;
+  margin-inline: auto;
 
 `
 
 
-export const SectionTeams = styled.View`
-  color: red;
+export const TextHome = styled.Text`
+  color: #9A1032;
   text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+
+  margin-top: auto;
+  margin-bottom: auto;
   
-
 `
-

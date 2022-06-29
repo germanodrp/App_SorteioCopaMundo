@@ -16,7 +16,8 @@ export function TabsRoutes() {
         <Navigator
             screenOptions={{
                 tabBarActiveTintColor: '#9A1032',
-                tabBarInactiveTintColor: 'gray',
+                tabBarInactiveTintColor: '#696761',
+                tabBarStyle: {backgroundColor: '#FBF1CD'},
                 headerShown: false,
             }}
         >
@@ -30,7 +31,7 @@ export function TabsRoutes() {
                         <MaterialIcons
                             name="home"
                             color={color}
-                            size="35px"
+                            size="40px"
                         />
                     )
                 }}
@@ -45,7 +46,7 @@ export function TabsRoutes() {
                         <MaterialIcons
                             name="flag"
                             color={color}
-                            size="35px"
+                            size="40px"
                         />
                     )
                 }}
@@ -60,7 +61,7 @@ export function TabsRoutes() {
                         <MaterialIcons
                             name="work"
                             color={color}
-                            size="35px"
+                            size="40px"
                         />
                     )
                 }}
